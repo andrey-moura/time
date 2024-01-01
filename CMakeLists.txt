@@ -11,5 +11,7 @@ include_directories(${CMAKE_CURRENT_LIST_DIR})
 
 #Tests
 
-#Create tests for parent project
-cspec_configure("uva-time" ${CMAKE_CURRENT_LIST_DIR} "uva-time")
+if(TARGET cspec)
+	#Create tests for parent project
+	cspec_configure("uva-time" ${CMAKE_CURRENT_LIST_DIR} "uva-time")
+endif()
